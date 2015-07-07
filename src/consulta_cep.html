@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Consulta CEP</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+    <div class="container" ng-app="searchCep">
+
+        <div class="page-header">
+            <h1>Consulta CEP</h1>
+        </div>
+
+            <div class="row" ng-controller="searchCepController">
+
+                <form action="">
+
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label for="">CEP</label>
+                            <div class="form-inline">
+                                <input type="text" class="form-control" size="20" ng-model="dados.cep">
+                                <button type="button" class="btn btn-primary" ng-click="doSearch()">Consultar</button>
+                                <button type="button" class="btn btn-info ng-hide" disabled="disabled" ng-show="shBtnPesquisando">Pesquisando ...</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-10">
+                            <label for="">Logradouro</label>
+                            <input type="text" class="form-control" size="100" ng-model="dados.logradouro">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="">Número</label>
+                            <input type="text" class="form-control" size="10" ng-model="dados.numero">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label for="">Complemento</label>
+                            <input type="text" class="form-control" ng-model="dados.complemento">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-5">
+                            <label for="">Bairro</label>
+                            <input type="text" class="form-control" ng-model="dados.bairro">
+                        </div>
+                        <div class="col-md-5">
+                            <label for="">Cidade</label>
+                            <input type="text" class="form-control" ng-model="dados.cidade">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="">UF</label>
+                            <input type="text" class="form-control" ng-model="dados.uf">
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+    </div>
+
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="js/consulta_cep.js"></script>
+</body>
+</html>
