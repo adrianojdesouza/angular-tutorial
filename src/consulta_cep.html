@@ -20,8 +20,8 @@
                         <div class="col-md-12">
                             <label for="">CEP</label>
                             <div class="form-inline">
-                                <input type="text" class="form-control" size="20" ng-model="dados.cep">
-                                <button type="button" class="btn btn-primary" ng-click="doSearch()">Consultar</button>
+                                <input type="text" class="form-control" size="20" ng-model="dados.cep" ng-keyup="setMaskCep()" maxlength="9">
+                                <button type="button" class="btn btn-primary" ng-click="doSearch()" ng-disabled="btnConsultaIsDisabled">Consultar</button>
                                 <button type="button" class="btn btn-info ng-hide" disabled="disabled" ng-show="shBtnPesquisando">Pesquisando ...</button>
                             </div>
                         </div>
